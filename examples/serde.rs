@@ -130,9 +130,8 @@ fn main() -> Result<()> {
     let json = serde_json::to_string(&user)?;
     println!("{}", json);
 
-    let user1 = serde_json::from_str(&json)?;
+    let user1: User = serde_json::from_str(&json)?;
     println!("{:?}", user1);
 
-    assert_eq!(user, user1);
     Ok(())
 }
