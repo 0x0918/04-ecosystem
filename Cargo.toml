@@ -35,3 +35,9 @@ strum = { version = "0.26.3", features = ["derive"] }
 base64 = "0.22.1"
 http = "1.1.0"
 blake3 = "1.5.1"
+console-subscriber = "0.3.0"
+dashmap = "6.0.1"
+futures = "0.3.30"
+loom = "0.7.2"
+tokio-stream = "0.1.15"
+tokio-util = { version = "0.7.11", features = ["codec"] }
