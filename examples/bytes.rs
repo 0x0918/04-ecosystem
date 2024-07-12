@@ -6,15 +6,15 @@ fn main() -> Result<()> {
     buf.extend_from_slice(b"hello world\n");
     buf.put(&b"goodbye world"[..]);
     buf.put_i64(0xdeadbeef);
-    println!("{:?}", buf);
+    println!("buf:{:?}", buf);
     let a = buf.split();
     let mut b = a.freeze();
 
     let c = b.split_to(12);
-    println!("{:?}", c);
+    println!("c:{:?}", c);
 
-    println!("{:?}", b);
-    println!("{:?}", buf);
+    println!("b:{:?}", b);
+    println!("buf:{:?}", buf);
 
     Ok(())
 }
